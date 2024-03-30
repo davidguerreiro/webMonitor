@@ -7,25 +7,20 @@
  * @author David Guerreiro
  */
 
- $logo_url = get_template_directory_uri() . '/app/images/logos/imagen-arbol.png';
+ $content   = get_field('home_image_text_content') ?? '';
+ $logo_url  = get_field('home_image_text_image') ?? '';
 
 ?>
 
 <section class="home-image-text">
     <div class="home-image-text__content-wrapper">
         <div class="home-image-text__content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus velit. Suspendisse ut tristique lectus. Nunc rhoncus risus a tellus imperdiet porttitor sed sit amet lacus. Proin porta lacus consectetur facilisis aliquam. Maecenas cursus quam sit amet velit pulvinar convallis. Curabitur tincidunt tincidunt suscipit.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus velit. Suspendisse ut tristique lectus. Nunc rhoncus risus a tellus imperdiet porttitor sed sit amet lacus. Proin porta lacus consectetur facilisis aliquam. Maecenas cursus quam sit amet velit pulvinar convallis. Curabitur tincidunt tincidunt suscipit.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus velit. Suspendisse ut tristique lectus. Nunc rhoncus risus a tellus imperdiet porttitor sed sit amet lacus. Proin porta lacus consectetur facilisis aliquam. Maecenas cursus quam sit amet velit pulvinar convallis. Curabitur tincidunt tincidunt suscipit.
-            </p>
+            <?php echo $content; ?>
         </div>
         <div class="home-image-text__image">
-            <img src="<?php echo esc_html($logo_url); ?>" alt="logo arbol">
+            <?php if ($logo_url) : ?>
+                <img src="<?php echo esc_url($logo_url); ?>" alt="logo arbol">
+            <?php endif; ?>
         </div>
     </div>
 </section>
