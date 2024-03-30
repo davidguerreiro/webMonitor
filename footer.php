@@ -9,7 +9,8 @@
 
  ?>
 
-            <footer class="main-footer">
+            <footer>
+                <?php get_template_part('template-parts/footer/main', 'footer'); ?>
             </footer>
         </main>
         <?php wp_footer(); ?>
