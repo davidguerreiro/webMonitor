@@ -7,7 +7,9 @@
  * @author David Guerreiro
  */
 
- $logo_url = get_template_directory_uri() . '/app/images/logos/logo.png';
+ $title         = get_field('home_hero_title') ?? '';
+ $description   = get_field('home_hero_description') ?? '';
+ $logo_url      = get_field('home_hero_logo') ?? '';
 
 ?>
 
@@ -18,10 +20,10 @@
         </div>
         <div class="home-hero__title-wrapper">
             <h1 class="home-hero__title">
-                Jesús Giráldez Vaquero
+                <?php echo esc_html($title); ?>
             </h1>
             <p class="home-hero__description">
-               Monitor de artes marciales especializado en Kung Fu, Taichi y Chi Kung. Afincado en Los Cristianos, Tenerife. Este es un texto de prueba y debe ser cambiado en la contribución final.
+               <?php echo esc_html($description); ?>
             </p>
         </div>
     </div>
