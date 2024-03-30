@@ -1,0 +1,24 @@
+// base paragraph style.
+@mixin base-text {
+    font-size: 20px;
+    line-height: 26px;
+
+    @media screen and ( max-width: 450px ) {
+        font-size: 18px;        
+    }
+}
+
+@mixin diamond {
+    content: "";
+    background:
+    linear-gradient(to top right   ,$main-red 49.5%, transparent 50%) top right,
+    linear-gradient(to top left    ,$main-red 49.5%, transparent 50%) top left,
+    linear-gradient(to bottom right,$main-red 49.5%, transparent 50%) bottom right,
+    linear-gradient(to bottom left ,$main-red 49.5%, transparent 50%) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    width: 34px;  /* 2*sin(120/2)*150 = 260 */
+    height: 34px; /* 2*sin(60/2)*150  = 150 OR 2*cos(120/2)*150  = 150*/
+    display: inline-block;
+    vertical-align: middle;
+}

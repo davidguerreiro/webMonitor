@@ -1,0 +1,119 @@
+.home-masters {
+    margin: 100px auto 0 auto;
+
+    &__section-wrapper {
+        background-color: $light-grey;
+        width: 100%;
+    }
+
+    &__section {
+        display: flex;
+        width: 100%;
+        max-width: $layout-max-width;
+        justify-content: space-around;
+        margin: 50px auto;
+        padding: 100px 0;
+
+        @media screen and ( max-width: 1450px ) {
+            width: 80%;
+        }
+
+        @media screen and ( max-width: 930px ) {
+            width: 90%;
+            flex-direction: column;
+        }
+
+        @media screen and ( max-width: 490px ) {
+            padding: 72px 0;
+            margin: 35px auto;
+        }
+    }
+
+    &__image {
+        img {
+            max-width: 635px;
+            height: auto;
+            object-fit: cover;
+
+            @media screen and ( max-width: 1450px ) {
+                width: 425px;
+            }
+
+            @media screen and ( max-width: 930px ) {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__content {
+        margin-left: 50px;
+
+        @media screen and ( max-width: 930px ) {
+            width: 80%;
+            margin: 40px auto 0 auto;
+        }
+    }
+
+    &__content-title {
+        font-size: 2.5em;
+        border-bottom: 2px solid $main-red;
+    }
+
+    &__list-content {
+        @include base-text;
+        list-style-type: disc;
+        margin: 20px 0 0 20px;
+
+        li::marker {
+            color: $main-red;
+        }
+
+        span {
+            font-weight: bold;
+            color: $main-red;
+        }
+    }
+
+    &__image--alternative {
+        @media screen and ( max-width: 930px ) {
+            margin-top: 50px;
+        }
+    }
+
+    &__description {
+        @include base-text;
+        margin-top: 20px;
+    }
+
+    &__section-wrapper--alternative {
+        background-color: transparent;
+
+        @media screen and ( max-width: 930px ) {
+            margin-top: -88px;
+        }
+    }
+
+    &__section--alternative {
+        flex-direction: row-reverse;
+
+        @media screen and ( max-width: 930px ) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__content--alternative {
+        margin-left: 0;
+        margin-right: 50px;
+
+        @media screen and ( max-width: 930px ) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and ( max-width: 550px ) {
+            margin-top: 10px;
+        }
+    }
+}

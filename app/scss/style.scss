@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+
+// abstracts.
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+// components.
+@import "components/header";
+@import "components/section-title";
+@import "components/header-top-bar";
+@import "components/home-hero";
+@import "components/home-image-text";
+@import "components/home-masters";
+@import "components/home-video";
+@import "components/home-multiple-image-text";
+@import "components/home-quote";
+@import "components/home-contact";
+
+// normalize and general styles.
+@import "vendors/normalize";
+@import "general/general";  

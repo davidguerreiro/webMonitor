@@ -1,0 +1,24 @@
+.home-video {
+
+    &__wrapper {
+        width: 100%;
+        max-width: $layout-max-width;
+        margin: 50px auto;
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__video-desc {
+        color: $grey;
+        margin: 10px auto 0 auto;
+
+        @media screen and ( max-width: 1450px ) {
+            width: 90%;
+        }
+
+    }
+}

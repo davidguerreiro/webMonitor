@@ -1,0 +1,91 @@
+.home-hero {
+    width: 100%;
+    max-width: $layout-max-width;
+    margin: 30px auto 0 auto;
+
+    @media screen and ( max-width: 400px ) {
+        margin: 18px auto 0 auto;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        width: 95%;
+        margin: $auto;
+        justify-content: space-around;
+
+        @media screen and ( max-width: 950px ) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media screen and ( max-width: 400px ) {
+            margin-top: 19px;   
+        }
+    }
+
+    &__logo {
+        width: 650px;
+        height: auto;
+
+        @media screen and ( max-width: 1290px ) {
+            width: 545px;
+        }
+
+        @media screen and ( max-width: 950px ) {
+            margin: 20px auto 0 auto;
+            display: block;
+        }
+
+        @media screen and ( max-width: 650px ) {
+            width: 320px;
+        }
+
+        @media screen and ( max-width: 400px ) {
+            margin: $auto;
+        }
+    }
+
+
+    &__title {
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 6em;
+
+        @media screen and ( max-width: 700px ) {
+            font-size: 3em;
+        }
+
+        @media screen and ( max-width: 700px ) {
+            font-size: 2.5em;
+        }
+    }
+
+    &__title-wrapper {
+        margin-left: 30px;
+        margin-top: 183px;
+
+        @media screen and ( max-width: 1290px ) {
+            margin-top: 56px;   
+        }
+
+        @media screen and ( max-width: 430px ) {
+            margin-top: 19px; 
+        }
+    }
+
+    &__description {
+        font-size: 20px;
+        margin-top: 30px;
+        line-height: 26px;
+        margin-left: 10px;
+
+        @media screen and ( max-width: 700px ) {
+            margin-left: 0;
+            width: 90%;
+        }
+        
+        @media screen and ( max-width: 450px ) {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    }
+}

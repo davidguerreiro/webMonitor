@@ -1,0 +1,21 @@
+.section-title {
+    display: block;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 4em;
+    text-align: center;
+
+    &::before {
+        @include diamond;
+        margin-right: 20px;
+        margin-bottom: 6px;
+    }
+
+    &::after {
+        @include diamond;
+        margin-left: 20px;
+    }
+
+    @media screen and ( max-width: 490px ) {
+        font-size: 3em;
+    }
+}

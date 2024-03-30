@@ -1,0 +1,55 @@
+.header-top-bar {
+    width: 100%;
+    border-bottom: 3px solid $main-red;
+
+    &__social {
+        margin: 15px 0;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+
+            @media screen and ( max-width: 450px ) {
+                justify-content: center;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+    }
+
+    &__element {
+        margin-right: 25px;
+
+        &--instagram-link {
+            margin-right: 12px;
+        }
+    }
+
+    &__social-icon {
+        width: 44px;
+        height: 44px;
+
+        &--instagram {
+            width: 37px;
+            height: 43px;
+        }
+
+        &--phone {
+            width: 53px;
+            height: 44px;
+        }
+    }
+
+    &__phone-number {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 11px;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,65 @@
+.home-quote {
+    width: 100%;
+    margin: 350px auto 0 auto;
+
+    @media screen and ( max-width:  490px ) {
+        margin-top: 283px;
+    }
+
+    &__box-wrapper {
+        position: relative;
+        max-width: 1200px;
+        width: 85%;
+        margin: $auto;
+        background-color: $light-grey;
+        border-top: 5px solid $main-red;
+    }
+
+    &__logo {
+        display: block;
+        position: absolute;
+        width: 215px;
+        height: auto;
+        left: 44%;
+        top: -227px;
+        z-index: -10;
+
+        @media screen and ( max-width:  940px ) {
+            left: 36%;
+        }
+
+        @media screen and ( max-width:  580px ) {
+            left: 26%;
+        }
+
+        @media screen and ( max-width:  490px ) {
+            left: 15%;
+        }
+
+    }
+
+    &__content {
+        font-size: 29px;
+        line-height: 41px;
+        font-weight: 100;
+        width: 69%;
+        margin: 25px auto 0 auto;
+        padding-bottom: 25px;
+
+        @media screen and ( max-width:  490px ) {
+            font-size: 26px;
+        }
+    }
+
+    &__author {
+        display: block;
+        font-size: 20px;
+        width: 85%;
+        max-width: 1200px;
+        margin: 10px auto 0 auto;
+        text-align: right;
+        font-style: italic;
+    }
+
+
+}
