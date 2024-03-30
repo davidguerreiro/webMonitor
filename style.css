@@ -343,13 +343,13 @@
     margin-top: 50px;
   }
 }
-.home-masters__description {
+.home-masters__description p {
   font-size: 20px;
   line-height: 26px;
   margin-top: 20px;
 }
 @media screen and (max-width: 450px) {
-  .home-masters__description {
+  .home-masters__description p {
     font-size: 18px;
   }
 }

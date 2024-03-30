@@ -83,8 +83,11 @@
     }
 
     &__description {
-        @include base-text;
-        margin-top: 20px;
+
+        p {
+            @include base-text;
+            margin-top: 20px;
+        }
     }
 
     &__section-wrapper--alternative {
