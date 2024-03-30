@@ -3,19 +3,33 @@
 
     &__wrapper {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         max-width: $layout-max-width;
         justify-content: space-around;
-        margin: 50px auto;
+        margin: 0 auto 50px auto;
+
+        @media screen and ( max-width: 450px ) {
+            margin-top: 50px;        
+        }
     }
 
     &__item {
         width: 420px;
+        margin-top: 50px;
         background-color: $light-red;
         transition: background-color .2s ease-in;
 
         &:hover {
             background-color: #dac4c4;
+        }
+
+        @media screen and ( max-width: 450px ) {
+            margin-top: 0;
+
+            &--instagram {
+                background-color: #ffaaaa;
+            }
         }
     }
 
@@ -32,6 +46,10 @@
             height: auto;
             margin: $auto;
             padding: 40px 0;
+
+            @media screen and ( max-width: 450px ) {
+                width: 205px;
+            }
         }
     }
 

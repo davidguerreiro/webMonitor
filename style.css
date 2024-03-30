@@ -564,18 +564,33 @@
 }
 .home-contact__wrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1450px;
   justify-content: space-around;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
+}
+@media screen and (max-width: 450px) {
+  .home-contact__wrapper {
+    margin-top: 50px;
+  }
 }
 .home-contact__item {
   width: 420px;
+  margin-top: 50px;
   background-color: #ffbdbd;
   transition: background-color 0.2s ease-in;
 }
 .home-contact__item:hover {
   background-color: #dac4c4;
+}
+@media screen and (max-width: 450px) {
+  .home-contact__item {
+    margin-top: 0;
+  }
+  .home-contact__item--instagram {
+    background-color: #ffaaaa;
+  }
 }
 .home-contact__wrapper-link {
   display: block;
@@ -588,6 +603,11 @@
   height: auto;
   margin: 0 auto;
   padding: 40px 0;
+}
+@media screen and (max-width: 450px) {
+  .home-contact__image img {
+    width: 205px;
+  }
 }
 .home-contact__contact-value {
   font-size: 23px;

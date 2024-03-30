@@ -24,7 +24,7 @@ $phone_number      = get_field('webj_phone_number', 'option') ?? '';
 
     <div class="home-contact__wrapper">
 
-        <div class="home-contact__item">
+        <div class="home-contact__item home-contact__item--email">
             <a href="mailto:<?php echo esc_html($email_address); ?>" class="home-contact__wrapper-link">
                 <div class="home-contact__image">
                     <img src="<?php echo esc_url($email_icon); ?>" alt="">
@@ -35,7 +35,7 @@ $phone_number      = get_field('webj_phone_number', 'option') ?? '';
             </a>
         </div>
 
-        <div class="home-contact__item">
+        <div class="home-contact__item home-contact__item--instagram">
             <a href="<?php echo esc_url($instagram_url); ?>" class="home-contact__wrapper-link" target="_blank">
                 <div class="home-contact__image">
                     <img src="<?php echo esc_url($instagram_icon); ?>" alt="">
@@ -46,7 +46,7 @@ $phone_number      = get_field('webj_phone_number', 'option') ?? '';
             </a>
         </div>
 
-        <div class="home-contact__item">
+        <div class="home-contact__item home-contact__item--phone">
             <a href="tel:<?php echo esc_html($phone_number); ?>" class="home-contact__wrapper-link">
                 <div class="home-contact__image">
                     <img src="<?php echo esc_url($phone_icon); ?>" alt="">
