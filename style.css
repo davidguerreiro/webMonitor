@@ -624,6 +624,36 @@
   }
 }
 
+.main-footer {
+  margin: 130px auto 50px auto;
+}
+.main-footer__logo {
+  position: relative;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+.main-footer__logo img {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+.main-footer__main-name {
+  margin-top: 40px;
+  text-align: center;
+  display: block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 2em;
+}
+.main-footer__disclaimer {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #808080;
+  margin-top: 12px;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
