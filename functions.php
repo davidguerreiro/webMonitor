@@ -33,3 +33,21 @@ function webj_register_acf_options_page()
 }
 
 add_action('init', 'webj_register_acf_options_page');
+
+/**
+ * Disable block editor for pages.
+ * 
+ * @param bool $curren_status
+ * @param string $post_type
+ * @return bool
+ */
+function webj_disable_block_editor_for_pages($current_status, $post_type)
+{
+    if ($current_status == 'page') {
+        return false;
+    }
+
+    return $current_status;
+}
+
+add_filter('use_block_editor_for_post_type', 'webj_disable_block_editor_for_pages', 2, 10);
