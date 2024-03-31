@@ -77,7 +77,10 @@
     }
 
     &__text-content {
-        @include base-text;
-        margin-top: 15px;
+
+        p {
+            @include base-text;
+            margin-top: 15px;
+        }
     }
 }
