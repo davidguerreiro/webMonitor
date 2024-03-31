@@ -51,3 +51,23 @@ function webj_disable_block_editor_for_pages($current_status, $post_type)
 }
 
 add_filter('use_block_editor_for_post_type', 'webj_disable_block_editor_for_pages', 2, 10);
+
+/**
+ * Parse instagram url to get user name.
+ *
+ * @param string $url
+ * @return string
+ */
+function webj_get_insta_user_name_from_url($url)
+{
+    $result = '';
+    $path   = parse_url($url, PHP_URL_PATH);
+
+    if (preg_match('/\/([a-zA-Z0-9_]+)\/?$/', $path, $matches)) {
+        if (isset($matches[1])) {
+            $result = $matches[1];
+        }
+    }
+
+    return $result;
+}

@@ -7,20 +7,24 @@
  * @author David Guerreiro
  */
 
-$email_icon        = get_template_directory_uri() . '/app/images/svg/email.svg';
-$instagram_icon    = get_template_directory_uri() . '/app/images/svg/instagram.svg';
-$phone_icon        = get_template_directory_uri() . '/app/images/svg/phone.svg';
+$email_icon         = get_template_directory_uri() . '/app/images/svg/email.svg';
+$instagram_icon     = get_template_directory_uri() . '/app/images/svg/instagram.svg';
+$phone_icon         = get_template_directory_uri() . '/app/images/svg/phone.svg';
 
-$email_address     = get_field('webj_email_address', 'option') ?? '';
-$instagram_url     = get_field('webj_instagram', 'option') ?? '';
-$phone_number      = get_field('webj_phone_number', 'option') ?? '';
+$email_address      = get_field('webj_email_address', 'option') ?? '';
+$instagram_url      = get_field('webj_instagram', 'option') ?? '';
+$phone_number       = get_field('webj_phone_number', 'option') ?? '';
 
-// TODO: Agregar instagram name field.
+$instagram_name     = webj_get_insta_user_name_from_url($instagram_url);
+
+$title              = get_field('home_contact_title') ?? '';
 
 ?>
 
 <section class="home-contact">
-    <h2 class="section-title">Contacto</h2>
+    <?php if ($title) : ?>
+        <h2 class="section-title"><?php echo esc_html($title); ?></h2>
+    <?php endif; ?>
 
     <div class="home-contact__wrapper">
 
@@ -41,7 +45,7 @@ $phone_number      = get_field('webj_phone_number', 'option') ?? '';
                     <img src="<?php echo esc_url($instagram_icon); ?>" alt="">
                 </div>
                 <div class="home-contact__contact-value">
-                    <p>@jesusinstagramname</p>
+                    <p>@<?php echo esc_html($instagram_name); ?></p>
                 </div>
             </a>
         </div>
