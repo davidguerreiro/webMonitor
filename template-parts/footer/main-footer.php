@@ -7,7 +7,10 @@
  * @author David Guerreiro
  */
 
-$logo_url = get_template_directory_uri() . '/app/images/logos/logo.png';
+$main_text      = get_field('footer_big_text', 'option') ?? '';
+$secondary_text = get_field('footer_secondary_text', 'option') ?? '';
+
+$logo_url       = get_template_directory_uri() . '/app/images/logos/logo.png';
 
 ?>
 
@@ -15,11 +18,13 @@ $logo_url = get_template_directory_uri() . '/app/images/logos/logo.png';
     <div class="main-footer__logo">
         <img src="<?php echo esc_url($logo_url); ?>" alt="">
     </div>
-    <p class="main-footer__main-name">
-        Jesús Giráldez Vaquero
-    </p>
+    <?php if ($main_text) : ?>
+        <p class="main-footer__main-name">
+            <?php echo esc_html($main_text); ?>
+        </p>
+    <?php endif; ?>
     <p class="main-footer__disclaimer">
-        &copy; 2024 Todos los derechos reservados. Web desarrollada por David Guerreiro.
+        &copy; <?php echo date('Y') . ' ' . esc_html($secondary_text); ?>
     </p>
 </div>
 
