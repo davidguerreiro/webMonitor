@@ -39,6 +39,9 @@ $title              = get_field('home_contact_title') ?? '';
             </a>
         </div>
 
+        <?php
+        /*
+        Removed in update 24-09-2024
         <div class="home-contact__item home-contact__item--instagram">
             <a href="<?php echo esc_url($instagram_url); ?>" class="home-contact__wrapper-link" target="_blank">
                 <div class="home-contact__image">
@@ -49,6 +52,8 @@ $title              = get_field('home_contact_title') ?? '';
                 </div>
             </a>
         </div>
+        */
+        ?>
 
         <div class="home-contact__item home-contact__item--phone">
             <a href="tel:<?php echo esc_html($phone_number); ?>" class="home-contact__wrapper-link">

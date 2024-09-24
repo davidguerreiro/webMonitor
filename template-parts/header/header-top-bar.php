@@ -15,6 +15,9 @@
  $instagram_url     = get_field('webj_instagram', 'option') ?? '';
  $phone_number      = get_field('webj_phone_number', 'option') ?? '';
 
+ // remove instagram in update 24-09-2024.
+ $instagram_url     = null;
+
 ?>
 
 <div class="header-top-bar">
