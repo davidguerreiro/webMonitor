@@ -10,7 +10,7 @@
 $main_text      = get_field('footer_big_text', 'option') ?? '';
 $secondary_text = get_field('footer_secondary_text', 'option') ?? '';
 
-$logo_url       = get_template_directory_uri() . '/app/images/logos/logo.png';
+$logo_url       = get_template_directory_uri() . '/app/images/logos/centro-presente.png';
 
 ?>
 
