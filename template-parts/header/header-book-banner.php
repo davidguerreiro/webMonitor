@@ -16,9 +16,9 @@
         <img src="<?php echo esc_url($img_url); ?>" alt="" class="header-book-element__book-image">
     </div>
     <div class="header-book-element">
-        <span class="header-book-element__main-text">El Despertar del Dragón</span>
+        <span class="header-book-element__main-text">«El despertar del dragón»</span>
     </div>
     <div class="header-book-element">
-        <a href="https://www.caligramaeditorial.com/libro/El-despertar-dragon?isbn=9791387602420" class="header-link-button">Ya a la venta</a>
+        <a href="https://libros.cc/El-despertar-dragon.htm?isbn=9791387602420" class="header-link-button" target="_blank">Ya a la venta</a>
     </div>
 </div>

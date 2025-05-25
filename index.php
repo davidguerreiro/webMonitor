@@ -20,6 +20,9 @@ get_template_part('template-parts/home/home-image', 'text');
 // display home masters section.
 get_template_part('template-parts/home/home', 'masters');
 
+// display home book section.
+get_template_part('template-parts/home/home', 'book');
+
 // display video section.
 get_template_part('template-parts/home/home', 'video');
 

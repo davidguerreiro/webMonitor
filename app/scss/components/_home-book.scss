@@ -1,0 +1,70 @@
+.home-book {
+    margin-bottom: 50px;
+
+    &__main-section {
+        background-color: $light-grey;
+        margin-top: 50px;
+        padding: 60px 0;
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and ( max-width: 1040px ) {
+            flex-direction: column;
+        }
+
+        @media screen and ( max-width: 450px ) {
+            padding-top: 0;
+        }
+    }
+
+    &__book-image {
+        width: 340px;
+        height: 100%;
+
+        @media screen and ( max-width: 1040px ) {
+            display: block;
+            margin: 0 auto 40px auto;
+        }
+
+        @media screen and ( max-width: 450px ) {
+            width: 100%;
+        }
+    }
+
+    &__details-wrapper {
+        max-width: 520px;
+
+        @media screen and ( max-width: 1040px ) {
+            margin: 0 auto;
+        }
+
+        @media screen and ( max-width: 450px ) {
+            width: 80%;
+        }
+    }
+
+    &__main-section-title {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &__links {
+        margin-top: 35px;
+        ul {
+            list-style-type: none;
+        }
+    }
+
+}
+
+.header-link-button {
+    &--main-section {
+        max-width: 106px;
+        margin-top: 15px;
+    }
+}
