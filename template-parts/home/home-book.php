@@ -7,30 +7,46 @@
  * @author David Guerreiro
  */
 
- $img_url = get_template_directory_uri() . "/app/images/content/libro-jesus.png";
+$section_title      = get_field('home_section_title') ?? '';
+$img_url            = get_field('home_book_image') ?? '';
+$book_title         = get_field('home_book_title') ?? '';
+$book_description   = get_field('home_book_description') ?? '';
+$first_link         = get_field('home_first_link') ?? [];
+$second_link        = get_field('home_second_link') ?? [];
 
 ?>
 
 <section class="home-book">
-    <h2 class="section-title">Una historia que merece la pena contar</h2>
+    <h2 class="section-title"><?php echo esc_html($section_title); ?></h2>
     <div class="home-book__main-section">
         <div>
-            <img src="<?php echo esc_url($img_url); ?>" alt="" class="home-book__book-image">
+            <?php if ($img_url) : ?>
+                <img src="<?php echo esc_url($img_url); ?>" alt="" class="home-book__book-image">
+            <?php endif; ?>
         </div>
         <div class="home-book__details-wrapper">
-            <h3 class="home-book__main-section-title">«El despertar del dragón»</h3>
+            <h3 class="home-book__main-section-title"><?php echo esc_html($book_title); ?></h3>
             <p class="home-book__description">
-                Una novela de superación basada en una historia real. La historia de un niño débil, inseguro y miedoso que se crio condicionado por una situación familiar muy adversa. Este niño acabó siendo dependiente de varias adicciones que le afectaban a su desarrollo. Las cosas pintaban muy mal para él hasta que descubrió la meditación y las artes marciales. Su vida cambió por completo. Ahora dedica su vida a entrenarse para vivir en armonía consigo mismo y seguir los pasos de su maestro Shaolin.
+                <?php echo esc_html($book_description); ?>
             </p>
             <div class="home-book__links-container">
                 <nav class="home-book__links">
                     <ul>
-                        <li>
-                            <a href="https://www.caligramaeditorial.com/entrevista/jesus-giraldez-vaquero-autor-de-el-despertar-del-dragon" class="header-link-button header-link-button--main-section" target="_blank">Ver entrevista</a>
-                        </li>
-                        <li>
-                            <a href="https://libros.cc/El-despertar-dragon.htm?isbn=9791387602420" class="header-link-button header-link-button--main-section" target="_blank">Comprar</a>
-                        </li>
+                        <?php if ($first_link): ?>
+                            <li>
+                                <a href="<?php echo esc_url($first_link['url']); ?>" class="header-link-button header-link-button--main-section" target="<?php echo esc_attr($first_link['target']); ?>">
+                                    <?php echo esc_html($first_link['title']); ?>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+                        <?php if ($second_link): ?>
+                            <li>
+                                <a href="<?php echo esc_url($second_link['url']); ?>" class="header-link-button header-link-button--main-section" target="<?php echo esc_attr($second_link['target']); ?>">
+                                    <?php echo esc_html($second_link['title']); ?>
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>
