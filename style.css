@@ -2,42 +2,79 @@
   width: 100%;
 }
 
-.section-title {
+.header-book-banner {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 15px 0;
+  background-color: #ffbdbd;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1000px) {
+  .header-book-banner {
+    padding: 5px 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .header-book-banner {
+    justify-content: space-around;
+  }
+}
+
+.header-book-element__book-image {
+  width: 90px;
+  height: auto;
+}
+.header-book-element__main-text {
   display: block;
   font-family: "Hammersmith One", sans-serif;
   font-size: 4em;
-  text-align: center;
+  margin-top: 31px;
 }
-.section-title::before {
-  content: "";
-  background: linear-gradient(to top right, #b22929 49.5%, transparent 50%) top right, linear-gradient(to top left, #b22929 49.5%, transparent 50%) top left, linear-gradient(to bottom right, #b22929 49.5%, transparent 50%) bottom right, linear-gradient(to bottom left, #b22929 49.5%, transparent 50%) bottom left;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  width: 34px;
-  /* 2*sin(120/2)*150 = 260 */
-  height: 34px;
-  /* 2*sin(60/2)*150  = 150 OR 2*cos(120/2)*150  = 150*/
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-  margin-bottom: 6px;
+@media screen and (max-width: 1000px) {
+  .header-book-element__main-text {
+    font-size: 2em;
+    margin-top: 6px;
+  }
 }
-.section-title::after {
-  content: "";
-  background: linear-gradient(to top right, #b22929 49.5%, transparent 50%) top right, linear-gradient(to top left, #b22929 49.5%, transparent 50%) top left, linear-gradient(to bottom right, #b22929 49.5%, transparent 50%) bottom right, linear-gradient(to bottom left, #b22929 49.5%, transparent 50%) bottom left;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  width: 34px;
-  /* 2*sin(120/2)*150 = 260 */
-  height: 34px;
-  /* 2*sin(60/2)*150  = 150 OR 2*cos(120/2)*150  = 150*/
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 20px;
+@media screen and (max-width: 540px) {
+  .header-book-element__main-text {
+    font-size: 1.4em;
+    margin-top: 9px;
+  }
 }
-@media screen and (max-width: 490px) {
-  .section-title {
-    font-size: 3em;
+@media screen and (max-width: 420px) {
+  .header-book-element__main-text {
+    font-size: 1.2em;
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-book-element--first {
+    display: none;
+  }
+}
+
+.header-link-button {
+  display: block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-top: 47px;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in;
+}
+.header-link-button:hover {
+  background-color: #b22929;
+}
+@media screen and (max-width: 1000px) {
+  .header-link-button {
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header-link-button {
+    margin-top: 0;
   }
 }
 
@@ -86,6 +123,45 @@
   margin-top: 11px;
   font-size: 19px;
   letter-spacing: 1px;
+}
+
+.section-title {
+  display: block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+.section-title::before {
+  content: "";
+  background: linear-gradient(to top right, #b22929 49.5%, transparent 50%) top right, linear-gradient(to top left, #b22929 49.5%, transparent 50%) top left, linear-gradient(to bottom right, #b22929 49.5%, transparent 50%) bottom right, linear-gradient(to bottom left, #b22929 49.5%, transparent 50%) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  width: 34px;
+  /* 2*sin(120/2)*150 = 260 */
+  height: 34px;
+  /* 2*sin(60/2)*150  = 150 OR 2*cos(120/2)*150  = 150*/
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-bottom: 6px;
+}
+.section-title::after {
+  content: "";
+  background: linear-gradient(to top right, #b22929 49.5%, transparent 50%) top right, linear-gradient(to top left, #b22929 49.5%, transparent 50%) top left, linear-gradient(to bottom right, #b22929 49.5%, transparent 50%) bottom right, linear-gradient(to bottom left, #b22929 49.5%, transparent 50%) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  width: 34px;
+  /* 2*sin(120/2)*150 = 260 */
+  height: 34px;
+  /* 2*sin(60/2)*150  = 150 OR 2*cos(120/2)*150  = 150*/
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+@media screen and (max-width: 490px) {
+  .section-title {
+    font-size: 3em;
+  }
 }
 
 .home-hero {

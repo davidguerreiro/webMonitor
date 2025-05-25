@@ -1,0 +1,74 @@
+.header-book-banner {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: $light-red;
+    justify-content: space-evenly;
+
+    @media screen and ( max-width: 1000px ) {
+            padding: 5px 0;
+    }
+
+    @media screen and ( max-width: 540px ) {
+            justify-content: space-around;
+    }
+}
+
+.header-book-element {
+
+    &__book-image {
+        width: 90px;
+        height: auto;
+    }
+
+    &__main-text {
+        display: block;
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 4em;
+        margin-top: 31px;
+
+        @media screen and ( max-width: 1000px ) {
+            font-size: 2em;
+            margin-top: 6px;
+        }
+
+        @media screen and ( max-width: 540px ) {
+            font-size: 1.4em;
+            margin-top: 9px;
+        }
+
+        @media screen and ( max-width: 420px ) {
+            font-size: 1.2em;
+            margin-top: 12px;
+        }
+    }
+
+    &--first {
+        @media screen and ( max-width: 1000px ) {
+            display: none;
+        }
+    }
+}
+
+.header-link-button {
+    display: block;
+    background-color: $black;
+    color: $white;
+    padding: 10px 20px;
+    margin-top: 47px;
+    text-decoration: none;
+    transition: background-color .1s ease-in;
+
+    &:hover {
+        background-color: $main-red;
+    }
+
+    @media screen and ( max-width: 1000px ) {
+        margin-top: 2px;
+    }
+
+    @media screen and ( max-width: 420px ) {
+        margin-top: 0;
+    }
+}

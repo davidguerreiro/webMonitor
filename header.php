@@ -25,6 +25,9 @@
         <header class="main-header">
 
             <?php 
+                // display header book banner module.
+                get_template_part('template-parts/header/header-book', 'banner');
+                
                 // display header top bar module.
                 get_template_part('template-parts/header/header-top', 'bar'); 
             ?>
