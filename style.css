@@ -6,9 +6,9 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 8px 0;
   background-color: #ffbdbd;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 @media screen and (max-width: 1000px) {
   .header-book-banner {
@@ -28,8 +28,7 @@
 .header-book-element__main-text {
   display: block;
   font-family: "Hammersmith One", sans-serif;
-  font-size: 4em;
-  margin-top: 31px;
+  font-size: 2em;
 }
 @media screen and (max-width: 1000px) {
   .header-book-element__main-text {
@@ -60,7 +59,6 @@
   background-color: #000000;
   color: #ffffff;
   padding: 10px 20px;
-  margin-top: 47px;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.1s ease-in;

@@ -7,18 +7,22 @@
  * @author David Guerreiro
  */
 
- $img_url = get_template_directory_uri() . "/app/images/content/libro-jesus.png";
+ $text = get_field('top_header_banner_text', 'option') ?? '';
+ $link = get_field('top_header_banner_link', 'option') ?? [];
 
  ?>
 
 <div class="header-book-banner">
     <div class="header-book-element header-book-element--first">
-        <img src="<?php echo esc_url($img_url); ?>" alt="" class="header-book-element__book-image">
     </div>
     <div class="header-book-element">
-        <span class="header-book-element__main-text">«El despertar del dragón»</span>
+        <span class="header-book-element__main-text"><?php echo esc_html($text); ?></span>
     </div>
     <div class="header-book-element">
-        <a href="https://libros.cc/El-despertar-dragon.htm?isbn=9791387602420" class="header-link-button" target="_blank">Ya a la venta</a>
+        <?php if (! empty($link)) : ?>
+            <a href="<?php echo esc_url($link['url']); ?>" class="header-link-button" target="<?php echo esc_attr($link['target']); ?>">
+                <?php echo esc_html($link['title']); ?>
+            </a>
+        <?php endif; ?>
     </div>
 </div>
