@@ -29,6 +29,7 @@
   display: block;
   font-family: "Hammersmith One", sans-serif;
   font-size: 2em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1000px) {
   .header-book-element__main-text {
@@ -45,7 +46,6 @@
 @media screen and (max-width: 420px) {
   .header-book-element__main-text {
     font-size: 1.2em;
-    margin-top: 12px;
   }
 }
 @media screen and (max-width: 1000px) {
