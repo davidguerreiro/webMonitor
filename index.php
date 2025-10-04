@@ -26,6 +26,9 @@ get_template_part('template-parts/home/home', 'book');
 // display video section.
 get_template_part('template-parts/home/home', 'video');
 
+// display gallery images section.
+get_template_part('template-parts/home/home', 'gallery');
+
 // display disciplines section.
 get_template_part('template-parts/home/home-multiple-image', 'text');
 
