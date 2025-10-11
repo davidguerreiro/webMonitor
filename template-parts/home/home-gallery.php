@@ -15,16 +15,35 @@ $images_section_2 = [get_template_directory_uri() . '/app/images/gallery/picture
 <section class="home-gallery">
     <h2 class="section-title">Viaje a China</h2>
     <p class="home-gallery__content">
-        El Centro Presente es mi proyecto personal que estará compuesto por 3 pilares fundamentales. El primero de ellos será la difusión y la preservación de las artes marciales chinas. El segundo pilar se centrará en la enseñanza de la meditación y de cómo esta puede ser una gran herramienta para ayudarnos a superar nuestras dificultades del día a día. Por último, como tercer pilar, con el Centro Presente quiero aportar un punto de información y ayuda con las adicciones y sus consecuencias.
+        En agosto de 2025 viajé a China formando parte de la delegación de la escuela Wujia Shaolin Chan Canary Center.
+        En este viaje tuvimos la oportunidad de practicar y obtener varios certificados de maestros de las artes marciales chinas. Uno de ellos de la Chinese Wushu Association de Chongqing y otro de Emei Zhongfeng Martial Arts en Emeishan.
+    </p>
+    <p class="home-gallery__content">
+        Durante el viaje pudimos disfrutar de la cultura china en su propia esencia. Visitando lugares emblemáticos como la Muralla China, la Ciudad Prohibida y el Monte sagrado de Emei. 
+        Para completar el viaje acudimos a actividades tradicionales como la caligrafía china y la ceremonia del té.
     </p>
 
-    <div class="gallery-grid">
-        <div class="gallery-grid__left-image">
-            <img src="<?php echo esc_url($images_section_1[0]); ?>" alt="">
+    <div class="home-gallery__grid-wrapper">
+        <div class="gallery-grid">
+            <div class="gallery-grid__left-image">
+                <img src="<?php echo esc_url($images_section_1[0]); ?>" alt="">
+            </div>
+            <div class="gallery-grid__right-images">
+                <img src="<?php echo esc_url($images_section_1[1]); ?>" alt="">
+                <img src="<?php echo esc_url($images_section_1[2]); ?>" alt="">
+            </div>
         </div>
-        <div class="gallery-grid__right-images">
-            <img src="<?php echo esc_url($images_section_1[1]); ?>" alt="">
-            <img src="<?php echo esc_url($images_section_1[2]); ?>" alt="">
+
+        <hr class="home-gallery__separator"/>
+
+        <div class="gallery-grid">
+            <div class="gallery-grid__right-images">
+                <img src="<?php echo esc_url($images_section_2[1]); ?>" alt="">
+                <img src="<?php echo esc_url($images_section_2[2]); ?>" alt="">
+            </div>
+            <div class="gallery-grid__left-image">
+                <img src="<?php echo esc_url($images_section_2[0]); ?>" alt="">
+            </div>
         </div>
     </div>
 
