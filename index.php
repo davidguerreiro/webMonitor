@@ -20,8 +20,8 @@ get_template_part('template-parts/home/home-image', 'text');
 // display home masters section.
 get_template_part('template-parts/home/home', 'masters');
 
-// display home book section.
-get_template_part('template-parts/home/home', 'book');
+// display disciplines section.
+get_template_part('template-parts/home/home-multiple-image', 'text');
 
 // display video section.
 get_template_part('template-parts/home/home', 'video');
@@ -29,8 +29,8 @@ get_template_part('template-parts/home/home', 'video');
 // display gallery images section.
 get_template_part('template-parts/home/home', 'gallery');
 
-// display disciplines section.
-get_template_part('template-parts/home/home-multiple-image', 'text');
+// display home book section.
+get_template_part('template-parts/home/home', 'book');
 
 // display quote section.
 get_template_part('template-parts/home/home', 'quote');
